@@ -28,8 +28,12 @@ module.exports = {
         test: /\.jsx$/,
         loader: 'babel',
         include: [
-          path.resolve(__dirname, 'app/index.jsx'),
-        ]
+          path.resolve(__dirname, 'app'),
+        ],
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015']
+        }
       }
     ]
   }
